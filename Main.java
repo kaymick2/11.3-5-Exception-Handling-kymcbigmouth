@@ -2,18 +2,24 @@ import java.util.Scanner;
 
 class Main {
   public static void main(String[] args) {
-    int x = 0;
+    int x = 0; 
+    Scanner input = new Scanner(System.in);
     do {
       try {
-
-        Scanner input = new Scanner(System.in);
         System.out.println("Enter the first number.");
         double no1 = input.nextDouble();
         System.out.println("Enter the second number.");
         double no2 = input.nextDouble();
-        x = 1;
       } catch (Exception e) {
         System.out.println("computer broke, call microsoft tech support");
+      }
+      System.out.println("Do you want to keep doing this pointless exercise? To quit, type 'quit' :");
+      System.out.println("if you screwed up the number entry and are seeing this, disregard the last statement :)");
+      String isQuit = input.next();
+      if (isQuit.equals("quit")) {
+        x = 1;
+      } else {
+        x = 0;
       }
     } while (x == 0);
   }
